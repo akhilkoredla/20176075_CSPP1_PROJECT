@@ -1,8 +1,6 @@
 def filein(s1,a):
 	for i in s1:	
-		if ord(i)>=48 and ord(i)<=57:
-			a=a+i
-		elif ord(i)>=97 and ord(i)<=122:
+		if ord(i)>=97 and ord(i)<=122:
 			a=a+i
 		else:
 			a=a+' '
