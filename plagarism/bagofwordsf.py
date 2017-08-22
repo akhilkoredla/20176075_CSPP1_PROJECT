@@ -40,7 +40,7 @@ def dotProductSum(d1,d2):
 				dot=d1[i]*d2[j]
 				sum+=dot
 	return sum
-dotsum=dotProductSum(d1,d1)
+dotsum=dotProductSum(d1,d2)
 
 def freqsquare(k):
 	z1=k.values()
