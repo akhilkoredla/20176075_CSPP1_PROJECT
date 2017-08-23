@@ -47,9 +47,7 @@ list=os.listdir(path)
 os.chdir(path)
 for i in range(len(list)):
 	for j in range(i+1,len(list)):
-		if i==j:
-			pass
-		else:
+		if i!=j:
 			file1=open(list[i],"r").read().lower()
 			file2=open(list[j],"r").read().lower()
 			bagofwords(file1,file2)
