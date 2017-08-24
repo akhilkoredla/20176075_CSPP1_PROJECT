@@ -40,14 +40,23 @@ def bagofwords(s1,s2):
 	f1=freqsquare(d1)
 	f2=freqsquare(d2)
 	similarity=((dotsum)/(f1*f2))*100
-	print "Similarity between two given files"+" "+list[i]+" & "+list[j]+" is "+str(similarity)+"%"
+	return similarity
 
 path="C:/Users/Akhil/Desktop/20176075_CSPP1_PROJECT/bagofwords/bag"
 list=os.listdir(path)
 os.chdir(path)
+l=['     ']
 for i in range(len(list)):
-	for j in range(i+1,len(list)):
-		if i!=j:
+	l.append(list[i])
+print l
+for i in range(len(list)):
+	l1=[]
+	for j in range(0,len(list)):		
+		if i==j:
+			l1.append(0.0)
+		else:
 			file1=open(list[i],"r").read().lower()
 			file2=open(list[j],"r").read().lower()
-			bagofwords(file1,file2)
+			l2=bagofwords(file1,file2)
+			l1.append(l2)
+	print list[i],l1		
