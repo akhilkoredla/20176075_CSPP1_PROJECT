@@ -1,5 +1,7 @@
 import os.path
+#create a main class as Lcs 
 class Lcs(object):
+	#two file in form of lists were taken and calculated teh lcs.
 	def common_length(self,l1,l2):
 		c=0
 		for i in range(len(l1)):
@@ -16,17 +18,20 @@ class Lcs(object):
 		return c
 
 	def lcs(self,file1,file2):
+		#we remove spaces in files and calculate their respective lengths 
 		l1=file1.split(" ")
 		len1=0
 		for i in l1:
 			len1+=len(i)
-
+		#len1 is total length of file1 irrespective of the spaces
 		l2=file2.split(" ")
 		len2=0
 		for j in l2:
 			len2+=len(j)
-
+		#len2 is total length of file2 irrespective of the spaces
+		#calling method to find the lcs.
 		a=lc.common_length(l1,l2)
+		#calculating the similarity in beteen the two files 
 		z=a*200
 		similarity=(float(z)/(len1+len2))
 		similarity=round(similarity,2)
